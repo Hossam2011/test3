@@ -20,7 +20,7 @@ jobs:
 
       - name: Check for Folder
         run: |
-          if [ ! -d "/Images"]
+          if [ ! -d '/Images']
           then
             mkdir -p Images
           fi
