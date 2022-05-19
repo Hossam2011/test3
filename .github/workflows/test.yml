@@ -5,9 +5,11 @@ name: JPG Mover
 on:
 
   push:
-    paths: '**.jpg'
+    paths: 
+     - '**.jpg'
   pull_request:
-    paths: '**.jpg'
+    paths: 
+     - '**.jpg'
 
 jobs:
   move-jpg:
@@ -27,7 +29,8 @@ jobs:
         run: mv *.jpg Images
         
       - name: Add user info and commit changes
-        run: git config user.name 'DanielBrett'
+        run: | 
+             git config user.name 'DanielBrett'
              git config user.email 'dbrett@brocku.ca'
              git add .
              git commit -m "JPG Mover Activated"
